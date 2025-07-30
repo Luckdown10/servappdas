@@ -1,0 +1,92 @@
+import { Card, CardContent } from "@/components/ui/card";
+import
+ { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Building2, MapPin, Phone, Mail, Zap } from "lucide-react";
+
+export default function CNPJFicha() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-white p-6 md:p-12">
+      <div className="max-w-5xl mx-auto">
+        <div className="bg-white rounded-2xl shadow-xl p-8 mb-6">
+          <h1 className="text-4xl font-bold text-indigo-700 mb-4">Ficha CNPJ</h1>
+          <p className="text-lg text-gray-700">Informações completas da empresa <strong>Insole Energia Solar S.A.</strong></p>
+        </div>
+
+        <Card className="mb-6 shadow-md border-0 bg-white rounded-xl">
+          <CardContent className="p-6 space-y-3">
+            <h2 className="text-2xl font-semibold text-indigo-600">Dados Cadastrais</h2>
+            <p><strong>CNPJ:</strong> 22.208.173/0003-02</p>
+            <p><strong>Razão Social:</strong> Insole Energia Solar S.A. - Em Recuperação Judicial</p>
+            <p><strong>Tipo:</strong> Filial de S/A Fechada</p>
+            <p><strong>Abertura:</strong> 12/03/2021</p>
+            <p><strong>Situação Cadastral:</strong> <Badge variant="outline">Ativa</Badge></p>
+          </CardContent>
+        </Card>
+
+        <Card className="mb-6 shadow-md border-0 bg-white rounded-xl">
+          <CardContent className="p-6 space-y-3">
+            <h2 className="text-2xl font-semibold text-indigo-600">Endereço</h2>
+            <div className="flex items-start gap-2">
+              <MapPin className="w-5 h-5 text-indigo-500" />
+              <p>Rua São Vicente de Paula, 298 - Atrás da Banca, Petrolina - PE, CEP 56308-050</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <Phone className="w-5 h-5 text-indigo-500" />
+              <p>(81) 3076-1423</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <Mail className="w-5 h-5 text-indigo-500" />
+              <p>insole@insole.com.br</p>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="mb-6 shadow-md border-0 bg-white rounded-xl">
+          <CardContent className="p-6 space-y-3">
+            <h2 className="text-2xl font-semibold text-indigo-600">Atividades Econômicas</h2>
+            <ul className="list-disc list-inside space-y-1 text-gray-700">
+              <li><strong>Principal:</strong> Fabricação de geradores de corrente contínua e alternada (CNAE 27.10-4/01)</li>
+              <li>Geração de energia elétrica</li>
+              <li>Serviços de engenharia</li>
+              <li>Representação comercial</li>
+              <li>Instalação elétrica</li>
+              <li>Holding, softwares, aluguel de equipamentos etc.</li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        <Card className="mb-6 shadow-md border-0 bg-white rounded-xl">
+          <CardContent className="p-6 space-y-3">
+            <h2 className="text-2xl font-semibold text-indigo-600">Principais Serviços</h2>
+            <ul className="list-disc list-inside space-y-1 text-gray-700">
+              <li>Projetos de Energia Solar Residencial e Empresarial</li>
+              <li>Instalação e Manutenção de Sistemas Fotovoltaicos</li>
+              <li>Consultoria em Eficiência Energética</li>
+              <li>Financiamento para Energia Solar</li>
+              <li>Monitoramento e Suporte Técnico</li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        <Card className="mb-6 shadow-md border-0 bg-white rounded-xl">
+          <CardContent className="p-6 space-y-3">
+            <h2 className="text-2xl font-semibold text-indigo-600">Quadro Societário</h2>
+            <ul className="list-disc list-inside text-gray-700">
+              <li>Adiel Bruno Santos de Melo – Diretor</li>
+              <li>Ananias dos Santos Gomes Júnior – Presidente</li>
+              <li>José Neres Cavalcante Júnior – Conselheiro</li>
+              <li>Carlson Barros de Carvalho – Conselheiro</li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        <div className="text-center mt-10">
+          <Button className="bg-indigo-600 hover:bg-indigo-700" tabIndex={0}>
+            Baixar Ficha CNPJ
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+}
